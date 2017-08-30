@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MiniRegression"  parallel="classes" thread-count="1">
+    <parameter name="浏览器" value="${browserName}" />
+    <test enabled="true" verbose="2" name="0" preserve-order="true">
+        <parameter name="测试场景" value="${sceneName}" />
+        <classes>
+            <class name="com.sevenstar.testcases.场景用例">
+                <methods>
+                    <include name="数据初始化及登录" />
+                    <include name="设置定盘数据测试" />
+                    <include name="关盘测试" />
+                    <include name="分批赔率测试"/>
+                    <include name="越级操作测试"/>
+                    <include name="拦货金额测试"/>
+                    <include name="开盘测试"/>
+                    <include name="赔率变动设置测试"/>
+                    <include name="实盘赔率设置测试"/>
+                    <include name="快打下注测试"/>
+                    <include name="前台下注明细测试"/>
+                    <include name="结账前总监报表及总货明细验证"/>
+                    <include name="结账前各级报表及总货明细验证"/>
+                    <include name="关盘结账"/>
+                    <include name="结账后总监报表及总货明细验证"/>
+                    <include name="结账后各级报表及总货明细验证"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Default suite -->
